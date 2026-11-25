@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bistro Rush: Master Chef</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #1a1512;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    user-select: none;
+  }
+  #game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    max-height: 800px;
+    aspect-ratio: 16 / 10;
+    background: #241c17;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  }
+  #game {
+    width: 100%;
+    height: 100%;
+    display: block;
+    touch-action: none;
+  }
+  #status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<div id="game-container">
+  <canvas id="game" width="1024" height="640" aria-label="Bistro Rush: Master Chef - Fast-paced kitchen simulation. Prepare ingredients, cook gourmet meals, and serve customers before time runs out."></canvas>
+  <p id="status" role="status" aria-live="polite"></p>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
