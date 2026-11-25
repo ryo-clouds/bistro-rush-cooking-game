@@ -2,7 +2,9 @@
 export const CANVAS_WIDTH = 1024;
 export const CANVAS_HEIGHT = 640;
 export const STEP = 1 / 60;
-export const SHIFT_DURATION = 150; // 2.5 minutes per full kitchen rush shift
+export const SHIFT_DURATION = 180; // 3.0 minutes per full kitchen rush shift for optimal pacing
+export const COMBO_MAX_MULTIPLIER = 4; // Maximum combo multiplier achievable
+export const COMBO_WINDOW_SECONDS = 15; // Time window to maintain active combo streak
 
 export const ITEM = Object.freeze({
   NONE: 'none',

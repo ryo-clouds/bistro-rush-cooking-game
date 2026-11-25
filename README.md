@@ -34,6 +34,15 @@
 
 ---
 
+## 🏗️ Technical Architecture & Design Principles
+
+- **Zero-Dependency Native Canvas Rendering:** The game engine executes at 60 FPS using standard `requestAnimationFrame` with fixed timestep simulation (`STEP = 1/60s`) preventing physics glitches across high-refresh displays.
+- **Pure Web Audio API Sound Synthesizer:** All acoustic feedback (chopping clatter, sizzling pans, brass service bell, combo chimes) is procedurally generated with real-time oscillators, white noise buffers, and biquad filters—zero external MP3/WAV assets required.
+- **Deterministic Mulberry32 PRNG:** Order generation, scene staging, and screenshot capture utilize a seeded pseudo-random number generator ensuring 100% reproducible kitchen scenarios.
+- **AABB Collision Physics:** Chef avatar movement uses continuous bounding box collision response with kitchen station counters and prep islands.
+
+---
+
 ## 🕹️ Controls
 
 - **[WASD]** or **[Arrow Keys]**: Move Chef around the kitchen
